@@ -27,3 +27,7 @@ about it at the start of each recursive call.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. You do not need to prove that the invariant is correct. Add
 your answer to this markdown file.
+
+
+### Answer
+A more directly helpful invariant would be that the last element in the array is the fibonacci value for the last index in of the array at that moment.  We start with the array \[0\].  Using the last index in the array, 0, we find that 0 is in fact the correct fibonacci value.  We then use the following case of \[0, 1\].  Using the last index, 1, we can find that the fibonacci value is in fact 1.  In every other following case, the program adds the previous two values in the array together, following the pattern of the fibonacci sequence.  We can see that \[0, 1, 1\] gives us the correct value of 1 for the index 2, and \[0, 1, 1, 2\] gives the proper value of 2 for the index 3, and so on.  This means that no matter the length of the list, the last value will always be the appropriate fibonacci value for the index.
