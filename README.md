@@ -27,3 +27,9 @@ about it at the start of each recursive call.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. You do not need to prove that the invariant is correct. Add
 your answer to this markdown file.
+
+
+### Answer
+A simple invariant would be that the elements in arr\[0...arr.length-1\] are always in sorted order.
+
+In the base case that n is 0, we see that the array is simply \[0\].  If the value of n is 1, the function adds 1 to the end of the array and will return the array \[0, 1\] on the next call.  As we can see in the inner function, each push beyond 1 is the sum of the previous two values in the array.  Since neither 0 nor 1 is a negative number, the value will always either be the same as the previous value (in the case of n=2 returning \[0, 1, 1\]) or higher.  This means that no matter the length of the array, it will always be sorted.
